@@ -2,8 +2,7 @@ version: "3.8"
 
 services:
   mysql:
-    user: "${UID}:${GID}" 
-    image: mysql:5.7
+    image: mysql:latest
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -23,7 +22,7 @@ services:
       start_period: 60s
 
   flask-app:
-    image: trainwithshubham/two-tier-flask-app:latest
+    image: dhruv800b/flask-app:latest
     container_name: flask-app
     ports:
       - "5000:5000"

@@ -22,7 +22,7 @@ phases:
     commands:
       - echo "docker push on docker hub"
       - docker push ${docker_user}/flask-app:latest
-
+# it is optionals
 artifacts:
   files:
     - '**/*'
